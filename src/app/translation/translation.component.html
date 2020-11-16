@@ -1,0 +1,10 @@
+
+<label>
+    Translate Text:
+    <input type="text" [formControl]="translation" aria-label="translation form">
+    <input (click)="handleTran()" type="submit" aria-label="submit button">
+</label>
+
+<p>
+    {{ translation.value }}
+</p>
