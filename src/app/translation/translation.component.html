@@ -1,10 +1,26 @@
+<div class="tran">
+    <label>
+        Translate:
+        <input type="text" [formControl]="translation" aria-label="translation form">
+        <input (click)="handleTran()" type="submit" aria-label="submit button">
+    </label>
 
-<label>
-    Translate Text:
-    <input type="text" [formControl]="translation" aria-label="translation form">
-    <input (click)="handleTran()" type="submit" aria-label="submit button">
-</label>
-
-<p>
-    {{ translation.value }}
-</p>
+    <p>
+        {{ translation.value }}
+    </p>
+    
+    <h3>Sample Text:</h3>
+    <p>
+      "Dorothy" lived in the midst of the great 'Kansas prairies', with "Uncle Henry", who was a farmer, 
+      and "Aunt Em", who was the farmer’s wife. Their house was small, for the lumber to build it had to be 
+      carried by wagon 'many miles'.
+    </p>
+    <p>
+      'Uncle Henry' never laughed. He worked hard from morning till night and did not know what 'joy' was.
+      He was "gray" also, from "his long" beard to his rough 'boots', and he looked 'stern' and "solemn", and rarely 'spoke'.
+    </p>
+    <p>
+      “There’s a cyclone coming, Em,” he called to his wife. 
+      “I’ll go look after the stock.” Then he ran toward the sheds where the cows and horses were kept.
+    </p>
+</div>

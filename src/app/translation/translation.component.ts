@@ -10,17 +10,16 @@ export class TranslationComponent {
   translation = new FormControl('');
   
   handleTran() {
-    let match = /["'].*?["']/g
-    let text = JSON.stringify(this.translation)
+    const match = /["'].*?["']/g
+    let text = JSON.stringify(this.translation.value)
     text.replace(match, 'XXXX')
   }
 
 }
   // Reactive Form
-
-  // replaceAll(search, replace)
+  
+  // replace(search, replace)
   // search using regex globally --- /["'].*?["']/g
-  // this.translation.replace(match, 'XXXX')
 
   // map over str
   // find & replace quotes 
