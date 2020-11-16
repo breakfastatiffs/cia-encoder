@@ -11,12 +11,12 @@ export class TranslationComponent {
   
   handleTran() {
     let match = /["'].*?["']/g
-    this.translation.replaceAll(match, 'XXXX')
+    let text = JSON.stringify(this.translation)
+    text.replace(match, 'XXXX')
   }
 
 }
   // Reactive Form
-
 
   // replaceAll(search, replace)
   // search using regex globally --- /["'].*?["']/g
