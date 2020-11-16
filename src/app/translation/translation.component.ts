@@ -12,7 +12,7 @@ export class TranslationComponent {
   handleTran() {
     const match = /["'].*?["']/g
     let text = JSON.stringify(this.translation.value)
-    text.replace(match, 'XXXX')
+    return text.replace(match, 'XXXX')
   }
 
 }
