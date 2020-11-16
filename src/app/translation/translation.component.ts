@@ -10,12 +10,18 @@ export class TranslationComponent {
   translation = new FormControl('');
   
   handleTran() {
-    this.translation.setValue(this.translation ? 'XXXX' : this.translation)
+    let match = /["'].*?["']/g
+    this.translation.replaceAll(match, 'XXXX')
   }
 
 }
   // Reactive Form
-  // replaceAll(search, replace)
 
-  // map over
-  // if inside quotes replace / if not keep same
+
+  // replaceAll(search, replace)
+  // search using regex globally --- /["'].*?["']/g
+  // this.translation.replace(match, 'XXXX')
+
+  // map over str
+  // find & replace quotes 
+  // stringify
