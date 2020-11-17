@@ -5,36 +5,53 @@ div{
 
 label{
     margin-top: 25px;
+    font-family: sans-serif;
 }
 
 h3{
     text-align: center;
+    font-family: sans-serif;
 }
 
-.tran{
-    margin-top: 35px;
-    text-align: center;
-    color: red;
+p{
     line-height: 1.5em;
+    font-family: monospace;
 }
 
+textarea{
+    background-color: #f4f4f4;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+}
+
+.btn{
+    font-weight: 600;
+    background-color:  #c9c9c9;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.btn:hover{
+    background-color: #FF0000;
+    cursor: pointer;
+}
 
 @media screen and (min-width: 500px) {
     div{
         margin: 0 100px;
     }
 
-    label{
-        margin: 25px auto;
-    }
-
-    .txt-form{
-        height: 25px;
-        width: 350px;
-    }
-
     .btn{
-        margin: 5px;
-        padding: 5px;
+        height: 2em;
+        font-size: .9em;
     }
+
+    p{
+        font-size: 1.1em;
+    }
+
 }

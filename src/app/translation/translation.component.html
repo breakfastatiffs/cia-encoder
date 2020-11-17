@@ -1,14 +1,12 @@
 <div>
     <label>
         Translate:
-        <input type="text" [(ngModel)]="translation" #ctrl="ngModel" aria-label="translation form" class="txt-form">
+        <br>
+        <textarea type="text" [(ngModel)]="translation" #ctrl="ngModel" aria-label="translation form" placeholder="Jack and 'Jill' ran up the 'hill'"></textarea>
+        <br>
         <input (click)="handleTran()" type="submit" aria-label="submit button" class="btn">
     </label>
-    
-    <p class="tran">
-        {{ translation }}
-    </p>
-    
+
     <h3>Sample Text:</h3>
     <p>
       "Dorothy" lived in the midst of the great 'Kansas prairies', with "Uncle Henry", who was a farmer, 
