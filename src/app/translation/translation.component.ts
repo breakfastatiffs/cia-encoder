@@ -11,8 +11,7 @@ export class TranslationComponent {
   handleTran() {
     const match = /["'].*?["']/g
     let tran = this.translation.replace(match, 'XXXX')
-    console.log('TRANSLATION', tran)
-    return tran
+    this.translation = tran
   }
 
 }
