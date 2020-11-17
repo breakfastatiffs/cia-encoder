@@ -1,12 +1,13 @@
 <div class="tran">
     <label>
         Translate:
-        <input type="text" [formControl]="translation" aria-label="translation form" class="txt-form">
+        <input type="text" [(ngModel)]="translation" #ctrl="ngModel" aria-label="translation form" class="txt-form">
         <input (click)="handleTran()" type="submit" aria-label="submit button" class="btn">
     </label>
 
     <p>
-        {{ translation.value }}
+        {{ translation }}
+        {{ctrl.valid}}
     </p>
     
     <h3>Sample Text:</h3>
@@ -18,9 +19,5 @@
     <p>
       'Uncle Henry' never laughed. He worked hard from morning till night and did not know what 'joy' was.
       He was "gray" also, from "his long" beard to his rough 'boots', and he looked 'stern' and "solemn", and rarely 'spoke'.
-    </p>
-    <p>
-      “There’s a cyclone coming, Em,” he called to his wife. 
-      “I’ll go look after the stock.” Then he ran toward the sheds where the cows and horses were kept.
     </p>
 </div>

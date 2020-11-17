@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-translation',
@@ -7,20 +6,18 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./translation.component.css']
 })
 export class TranslationComponent {
-  translation = new FormControl('');
+  translation: string = '';
+  // @Input()
+  // @Output() var = new EventEmitter<string>()
   
   handleTran() {
     const match = /["'].*?["']/g
-    let text = JSON.stringify(this.translation.value)
-    return text.replace(match, 'XXXX')
+    let tran = this.translation.replace(match, 'XXXX')
+    console.log('TRANSLATION', tran)
+    return tran
   }
 
 }
   // Reactive Form
-  
   // replace(search, replace)
   // search using regex globally --- /["'].*?["']/g
-
-  // map over str
-  // find & replace quotes 
-  // stringify
