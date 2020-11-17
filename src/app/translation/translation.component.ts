@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-translation',
@@ -7,9 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class TranslationComponent {
   translation: string = '';
-  // @Input()
-  // @Output() var = new EventEmitter<string>()
-  
+
   handleTran() {
     const match = /["'].*?["']/g
     let tran = this.translation.replace(match, 'XXXX')
