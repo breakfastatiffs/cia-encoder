@@ -1,11 +1,11 @@
-<div class="tran">
+<div>
     <label>
         Translate:
         <input type="text" [(ngModel)]="translation" #ctrl="ngModel" aria-label="translation form" class="txt-form">
         <input (click)="handleTran()" type="submit" aria-label="submit button" class="btn">
     </label>
-
-    <p>
+    
+    <p class="tran">
         {{ translation }}
     </p>
     
