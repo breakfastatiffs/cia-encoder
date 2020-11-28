@@ -16,9 +16,12 @@ export class TranslationComponent {
   // replace any ' or " with XXXX
   // let global variable (translation) = translated string (tran
   handleTran() {
-    const match = /["'].*?["']/g
+    const match = /["'`].*?["'`]/g
     let tran = this.translation.replace(match, 'XXXX')
     this.translation = tran
   }
 
 }
+
+
+// STRETCH GOALS : adding `` to filter, adding an option to add your own filter and then translation through that
