@@ -2,10 +2,15 @@
     <label>
         Translate:
         <br>
+        <input type='text' [(ngModel)]="match" #ctrl="ngModel">
+        <br>
         <textarea type="text" [(ngModel)]="translation" #ctrl="ngModel" aria-label="translation form" placeholder="Jack and 'Jill' ran up the 'hill'"></textarea>
         <br>
         <input (click)="handleTran()" type="submit" aria-label="submit button" class="btn">
     </label>
+
+    <h3>Translation:</h3>
+    <p>{{tran}}</p>
 
     <h3>Sample Text:</h3>
     <p>

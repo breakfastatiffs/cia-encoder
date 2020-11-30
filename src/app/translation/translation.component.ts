@@ -10,15 +10,17 @@ import { Component } from '@angular/core';
 })
 export class TranslationComponent {
   translation: string = '';
+  match: string = '';
+  tran: string = '';
 
   // -replace(search, replace)-
   // search using regex globally --- /["'].*?["']/g
   // replace any ' or " with XXXX
   // let global variable (translation) = translated string (tran
   handleTran() {
-    const match = /["'`].*?["'`]/g
-    let tran = this.translation.replace(match, 'XXXX')
-    this.translation = tran
+    // debugger
+    let match = new RegExp(`(${this.match.split(" ").join("|")})`, 'gim')
+    this.tran = this.translation.replace(match, 'XXXX')
   }
 
 }
@@ -26,3 +28,7 @@ export class TranslationComponent {
 
 // STRETCH GOALS : adding `` to filter, adding an option to add your own filter and then translation through that
 // 0(1) Constant bc you only need to run through str once with the find and replace fn
+
+// match1 split() or search (/["'].*?["']/g)
+// match2 .split(" ").
+// join both matches
