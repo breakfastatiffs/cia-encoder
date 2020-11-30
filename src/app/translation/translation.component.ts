@@ -25,3 +25,4 @@ export class TranslationComponent {
 
 
 // STRETCH GOALS : adding `` to filter, adding an option to add your own filter and then translation through that
+// 0(1) Constant bc you only need to run through str once with the find and replace fn
